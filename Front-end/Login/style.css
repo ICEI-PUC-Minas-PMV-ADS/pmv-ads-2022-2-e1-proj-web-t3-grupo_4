@@ -1,0 +1,44 @@
+body {
+    background: white;
+    background: linear-gradient(to right, #ffffff, #618dab);
+}
+
+
+#Titulo {
+    font-size: 30px !important;
+}
+
+
+#botaoEntrar {
+    color: white !important;
+    background-color: #284355;
+    border-color: #284355;
+}
+
+.btn-google {
+    color: white !important;
+    background-color: #ea4335;
+    text-transform: none !important;
+}
+
+.btn-facebook {
+    color: white !important;
+    background-color: #3b5998;
+    text-transform: none !important;
+}
+
+.footer {
+    height: 70px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    color: rgb(0, 0, 0);
+    flex-direction: row-reverse;
+}
+
+#botaoCadastrese {
+    color: white !important;
+    background-color: #284355;
+    border-color: #284355;
+    text-transform: none !important;
+}
