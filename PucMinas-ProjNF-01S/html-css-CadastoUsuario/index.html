@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Tela inicial - cadastro </title>
+</head>
+<body>
+    <h1>Minha Garantia Ltda</h1>
+    <hr>
+    <h2>Tipo de Cadastro</h2>
+    <form>
+       <fieldset = id="Abertura">
+           <input type="radio" name="tRazaoSocial" id="cCPF"/><label for="cCPF">CPF</label> <input type="number" name="tCPF" id="idCPF" size="11" min="0" maxlength="11" placeholder="CPF 11 dígitos">
+          <br> <!-- **PROBLEMA - não está limitando os números do CPF-->
+           <input type="radio" name="tRazaoSocial" id="cCNPJ"/><Label for="cCNPJ">CNPJ</Label> <input type="number" name="" id="">
+       </fieldset> <!-- **PROBLEMA - não está limitando os números do CPF e a caixa não está alinhada-->
+    </form>
+    <br>
+    <button>
+        <a href="pag-cadUsuario.html" rel="next">avançar</a>
+    </button>
+</body>
+</html>
