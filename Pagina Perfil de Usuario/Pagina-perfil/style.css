@@ -1,0 +1,34 @@
+/*Assossiaçao pelo nome do elemento */
+h1 {
+    color: black);
+}
+
+/* Associaçao pelo id do elemento */
+#tit_1{
+    font-size: 40px;
+}
+
+/*Associaçao pela classe do elemento*/
+.noticias {
+    font-family: arial;
+}
+
+body{
+    background-color: white;
+}
+
+#titulo_da_pagina{
+    width: 100%;
+    max-width: max-content;
+    float: 
+}
+#informaçoes_gerais{
+    width: 40%;
+}
+#configuraçoes{
+    width: 40%;
+}
+#suporte{
+    width: 100%;
+    max-width: max-content;
+}
