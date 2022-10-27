@@ -1,0 +1,133 @@
+<!doctype html5>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Cadastro de Notas Fiscais</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    
+    <link href="form-validation.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <div class="container">
+        <main>
+          <div class="py-5 text-center">
+            <h2>Cadastro de Notas Fiscais</h2>
+          </div>
+      
+          <div class="row g-5">
+            <div class="col-md-5 col-lg-4 order-md-last">
+              <div class="alert alert-primary" role="alert">
+                Digite as Informações da nota fiscal que deseja controlar a garantia do produto.
+              </div>
+              <div class="alert alert-primary" role="alert">
+                Caso necessário informe os arquivos com os dados da nota fiscal. Os formatos suportados são .png, .jpg e .pdf.
+              </div>
+            </div>
+
+            <div class="col-md-7 col-lg-8">
+              <form class="needs-validation" novalidate>
+                <div class="row g-3">
+                  <div class="col-12">
+                      <label for="produto" class="form-label">Nome do produto</label>
+                      <input type="text" class="form-control" id="produto" placeholder="Digite o nome do produto" value="" required>
+                      <div class="invalid-feedback">
+                          É necessário digitar o nome do produto.
+                      </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="marca" class="form-label">Marca do produto</label>
+                    <input type="text" class="form-control" id="marca" placeholder="Digite a marca do produto" value="" required>
+                    <div class="invalid-feedback">
+                        É necessário digitar a marca do produto.
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="data" class="form-label">Data da compra</label>
+                    <input type="date" class="form-control" id="data" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        Selecione a data da compra.
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label for="tempo" class="form-label">Tempo de garantia</label>
+                    <input type="number" class="form-control" id="tempo" placeholder="" value="" required>
+                    <div class="invalid-feedback">
+                        Digite o tempo de garantia.
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <label for="estado" class="form-label">Estado</label>
+                    <select class="form-select" id="estado" required>
+                      <option value="">... Escolha ...</option>
+                      <option value="AC">Acre</option>
+                      <option value="AL">Alagoas</option>
+                      <option value="AP">Amapá</option>
+                      <option value="AM">Amazonas</option>
+                      <option value="BA">Bahia</option>
+                      <option value="CE">Ceará</option>
+                      <option value="DF">Distrito Federal</option>
+                      <option value="ES">Espírito Santo</option>
+                      <option value="GO">Goiás</option>
+                      <option value="MA">Maranhão</option>
+                      <option value="MT">Mato Grosso</option>
+                      <option value="MS">Mato Grosso do Sul</option>
+                      <option value="MG">Minas Gerais</option>
+                      <option value="PA">Pará</option>
+                      <option value="PB">Paraíba</option>
+                      <option value="PR">Paraná</option>
+                      <option value="PE">Pernambuco</option>
+                      <option value="PI">Piauí</option>
+                      <option value="RJ">Rio de Janeiro</option>
+                      <option value="RN">Rio Grande do Norte</option>
+                      <option value="RS">Rio Grande do Sul</option>
+                      <option value="RO">Rondônia</option>
+                      <option value="RR">Roraima</option>
+                      <option value="SC">Santa Catarina</option>
+                      <option value="SP">São Paulo</option>
+                      <option value="SE">Sergipe</option>
+                      <option value="TO">Tocantins</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Selecione o estado da compora.
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="cidade" class="form-label">Cidade</label>
+                    <input type="text" class="form-control" id="cidade" placeholder="Digite a cidade da compra" value="" required>
+                    <div class="invalid-feedback">
+                        Digite a cidade da compra.
+                    </div>
+                  </div>                  
+                  <div class="mb-3">
+                    <label for="arquivos" class="form-label">Escolha os arrquivos da nota fiscal</label>
+                    <input class="form-control" type="file" id="arquivos" accept=".jpg,.pdf,.png" multiple>
+                  </div>
+                  <hr class="my-4">
+                  <div class="d-grid gap-2 d-md-block">
+                    <button class="btn btn-secondary" type="button">Cancelar </button>
+
+                    <button class="btn btn-primary" type="submit">Salvar</button>
+                  </div>
+              </form>
+            </div>
+          </div>
+        </main>
+      
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+          <p class="mb-1">&copy; 2022 Minha Garantia</p>
+        </footer>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+      <script src="form-validation.js"></script>
+</body>
