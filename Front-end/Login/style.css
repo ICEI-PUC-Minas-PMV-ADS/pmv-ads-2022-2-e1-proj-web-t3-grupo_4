@@ -15,13 +15,13 @@ body {
     border-color: #284355;
 }
 
-.btn-google {
+#btn-google {
     color: white !important;
     background-color: #ea4335;
     text-transform: none !important;
 }
 
-.btn-facebook {
+#btn-facebook {
     color: white !important;
     background-color: #3b5998;
     text-transform: none !important;
