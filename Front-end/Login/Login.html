@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-signin-client_id"
+        content="655703055622-gdqg0q28mh8725vfjhutfk1idnhcfagj.apps.googleusercontent.com">
     <title>Tela login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -12,21 +14,36 @@
 </head>
 
 <body>
+    <div class="modal fade" id="modalEsqueciSenha" tabindex="-1" aria-labelledby="modalEsqueciSenhaLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEsqueciSenhaLabel">Esqueci a senha</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Voce Recebera um e-mail com istruções para cadastrar nova senha
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="row">
             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
                 <div class="card border-0 shadow rounded-3 my-5">
                     <div class="card-body p-4 p-sm-5">
                         <h5 class="card-title text-center mb-5 fw-light fs-5" id="Titulo">Minha Garantia</h5>
-                        <form>
+                        <div>
                             <div class="form-floating mb-3">
-                                <input type="email" class="form-control" id="floatingInput"
-                                    placeholder="name@example.com">
+                                <input type="email" class="form-control" id="email" placeholder="name@example.com">
                                 <label for="floatingInput">E-mail</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="password" class="form-control" id="floatingPassword"
-                                    placeholder="Password">
+                                <input type="password" class="form-control" id="password" placeholder="Password">
                                 <label for="floatingPassword">Senha</label>
                             </div>
 
@@ -43,17 +60,21 @@
                             </div>
 
                             <div class="d-grid">
-                                <button class="btn btn-link" type="reset">Esqueceu sua senha?</button>
+                                <button class="btn btn-link" type="reset" data-bs-toggle="modal"
+                                    data-bs-target="#modalEsqueciSenha">Esqueceu sua senha?</button>
                             </div>
 
                             <hr class="my-4">
-                            <div class="d-grid mb-2">
-                                <button class="btn btn-google btn-login text-uppercase fw-bold" type="submit">
+                            <div id="gSignInWrapper" class="d-grid mb-2">
+                                <button id="btn-google" data-onsuccess="onSignIn"
+                                    class="btn  btn-login text-uppercase fw-bold" type="submit">
                                     <i class="bi bi-google"></i> Entrar com Google
                                 </button>
                             </div>
+
+
                             <div class="d-grid mb-5">
-                                <button class="btn btn-facebook btn-login text-uppercase fw-bold" type="submit">
+                                <button id="btn-facebook" class="btn btn-login text-uppercase fw-bold" type="submit">
                                     <i class="bi bi-facebook "></i> Entrar com Facebook
                                 </button>
                             </div>
@@ -63,7 +84,7 @@
                                 <button class="btn btn-primary btn-login text-uppercase fw-bold" id="botaoCadastrese"
                                     type="submit">CADASTRE-SE</button>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -75,7 +96,6 @@
                 <p class="text-end">Desenvolvido por: Grupo 4</p>
             </div>
         </footer>
-
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
@@ -87,7 +107,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
         integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
         crossorigin="anonymous"></script>
-
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="./login.js"></script>
 </body>
 
 </html>
