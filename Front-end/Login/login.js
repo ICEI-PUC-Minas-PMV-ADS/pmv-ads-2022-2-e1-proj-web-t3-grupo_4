@@ -5,16 +5,59 @@ var cadastrarBotao = document.getElementById('botaoCadastrese')
 
 entrarBotao.addEventListener("click", login);
 cadastrarBotao.addEventListener("click", cadastrar);
+emailInput.addEventListener("focusout", validarEmail);
+
+var usuarios = [
+    {
+        login : 'a@a.com',
+        senha: 'a'
+    },
+    {
+        login : 'fulalo@deTal.com',
+        senha: 'ciclano'
+    },
+    
+]
 
 function login() {
-    if (emailInput.value === 'adm' && passwordInput.value === '123')
-        window.location.href = '../Principal/Home.html'
+    let usuario = usuarios.find( u=> u.login === emailInput.value);
+    let senhaValida = usuario != null && usuario.senha === passwordInput.value
+    if ( senhaValida){
+
+        passwordInput.classList.remove("is-invalid");
+        window.location.href = '../Principal/Home.html'//todo incluir endereço correto da home
+    }   
+    else{
+        passwordInput.classList.add("is-invalid")
+    }
 }
+
 
 function cadastrar() {
-    window.location.href = '../Principal/Home.html'
+    window.location.href = '../Principal/Home.html'//todo incluir endereço correto do cadastro usuario
 }
 
+function validarEmail() {
+      if(emailInput.value === ""){
+        emailInput.classList.remove("is-invalid")
+        emailInput.classList.remove("is-valid")
+      }
+      else if(emailValido(emailInput.value)){
+        emailInput.classList.remove("is-invalid")
+        emailInput.classList.add("is-valid")
+      }else{
+        emailInput.classList.remove("is-valid")
+        emailInput.classList.add("is-invalid")
+      }
+  };
+
+function emailValido(email){
+    return  String(email)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+}  
 var googleUser = {};
 var startApp = function () {
     gapi.load('auth2', function () {
@@ -54,3 +97,5 @@ function onSignIn(googleUser) {
 //         console.log('User signed out.');
 //     });
 // }
+
+
