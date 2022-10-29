@@ -4,6 +4,7 @@
 <head>
     <meta charset="ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Talita Pereira">
 
     <title>Cadastro de Notas Fiscais</title>
 
@@ -33,7 +34,7 @@
             </div>
 
             <div class="col-md-7 col-lg-8">
-              <form class="needs-validation" novalidate>
+              <form action="./index.html?cadastro=1" method="post" class="needs-validation" novalidate>
                 <div class="row g-3">
                   <div class="col-12">
                       <label for="produto" class="form-label">Nome do produto</label>
@@ -113,7 +114,7 @@
                   </div>
                   <hr class="my-4">
                   <div class="d-grid gap-2 d-md-block">
-                    <button class="btn btn-secondary" type="button">Cancelar </button>
+                    <button id="cancelar" class="btn btn-secondary" type="button">Cancelar </button>
 
                     <button class="btn btn-primary" type="submit">Salvar</button>
                   </div>
@@ -130,4 +131,11 @@
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
       <script src="form-validation.js"></script>
+      <script>
+        document.getElementById("cancelar").onclick = function () {
+          if (confirm('Todas as informções serão perdidas')) {
+            location.href = "./index.html";
+          }
+        };
+    </script>
 </body>
