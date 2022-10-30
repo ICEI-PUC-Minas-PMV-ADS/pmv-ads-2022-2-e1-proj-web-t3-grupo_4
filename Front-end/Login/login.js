@@ -33,9 +33,9 @@ function login() {
 }
 
 
-function cadastrar() {
-    window.location.href = '../../PucMinas-ProjNF-01S/html-css-CadastoUsuario/index.html'
-}
+// function cadastrar() {
+//     window.location.href = ''
+// }
 
 function validarEmail() {
       if(emailInput.value === ""){
