@@ -34,7 +34,7 @@ function login() {
 
 
 function cadastrar() {
-    window.location.href = '../Principal/Home.html'//todo incluir endereço correto do cadastro usuario
+    window.location.href = '../../PucMinas-ProjNF-01S/html-css-CadastoUsuario/index.html'
 }
 
 function validarEmail() {
