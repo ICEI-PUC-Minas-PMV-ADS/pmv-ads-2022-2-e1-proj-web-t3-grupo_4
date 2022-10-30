@@ -1,0 +1,109 @@
+<!doctype html5>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="ISO-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Talita Pereira">
+
+    <title>Consulta de Notas Fiscais</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    
+    <link href="form-validation.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <div class="container">
+        <main>
+          <div class="py-5 text-center">
+            <h2>Consulta de Notas Fiscais</h2>
+          </div>
+            <div class="col-md-7 col-lg-8">
+              <form class="needs-validation" novalidate>
+                <div class="row g-3">
+                  <div class="col-12">
+                      <label for="produto" class="form-label">Nome do produto</label>
+                      <input type="text" class="form-control" id="produto" placeholder="Digite o nome do produto" value="" >
+                  </div>
+                  <div class="col-12">
+                    <label for="marca" class="form-label">Marca do produto</label>
+                    <input type="text" class="form-control" id="marca" placeholder="Digite a marca do produto" value="" >
+                  </div>
+
+                  <hr class="my-4">
+                  <div class="d-grid gap-2 d-md-block">
+                    <button id="buscar" class="btn btn-secondary" type="button">Buscar</button>
+
+                    <button id="cadastrar" class="btn btn-primary" type="button">Cadastrar</button>
+                  </div>
+                  <hr class="my-4">
+
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Cod.</th>
+                        <th scope="col">Produto</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Vencimento</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Televisão</td>
+                        <td>LG</td>
+                        <td>12/10/2022</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Relógio</td>
+                        <td>Cassio</td>
+                        <td>05/10/2023</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Guarda Roupa</td>
+                        <td>Itatiaia</td>
+                        <td>12/06/2026</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>Notebook</td>
+                        <td>Dell</td>
+                        <td>12/10/2025</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+              </form>
+            </div>
+          </div>
+        </main>
+      
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+          <p class="mb-1">&copy; 2022 Minha Garantia</p>
+        </footer>
+      </div>
+      <script>
+        const queryString = window.location.search;
+        
+        if (queryString.indexOf("cadastro=1") == 1) {
+          alert("Cadastro realizado com sucesso");
+        }
+
+        document.getElementById("cadastrar").onclick = function () {
+            location.href = "./cadastro.html";
+        };
+
+        document.getElementById("buscar").onclick = function () {
+            alert("Busca Realizada!");
+        };
+    </script>
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+</body>

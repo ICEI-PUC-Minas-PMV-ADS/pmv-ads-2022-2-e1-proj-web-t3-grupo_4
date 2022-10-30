@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFORMAÇOES GERAIS</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 90%;
+        }
+        header{
+            display: block;
+            margin: auto;
+        }
+        #cor{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>
+           <b>Informações Gerais </b> 
+    </h2>
+</header>
+    <section>
+       <form action="">
+        <h4>
+          <a id="cor" href="">  Visualização de notas </a> <br>
+    </h4>
+
+        <h4>
+           <label for="inot"></label> Notificações <br> (
+            <input type="radio" name="lig/desl" id="iLig" value="lig" checked>
+            <label for="ilig">On</label>
+            <input type="radio" name="lig/desl" id="idesl"value="desl" >
+            <label for="idesl" >Off  )</label><br>
+           
+    </h4>
+
+        <h4>     
+            <label for="ilingua"> Idioma </label>
+            <select name="lingua" id="ilingua">
+               <option value="">Selecione um Idioma</option>
+               <option value="Portugues br">Portugês Br</option>
+               <option value="English">English</option><br>
+        </select>
+    </h4>
+
+            <h4>     
+            Exibir Notas já vencidas <br>(
+            <input type="radio" name="on/off" id="ion" value="on">
+            <label for="ion">Exibir</label>
+            <input type="radio" name="on/off" id="ioff" value="off" checked>
+            <label for="ioff">Não exibir )</label><br>
+    </h4>
+</form>
+
+</section>
+
+</body>
+</html>
