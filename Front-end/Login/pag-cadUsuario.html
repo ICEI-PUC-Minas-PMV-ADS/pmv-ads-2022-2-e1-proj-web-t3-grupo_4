@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br  ">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Cadastro Usuário</title>
+
+
+</head>
+<body>
+    <h1>Cadastro de usuário - CNJP </h1>
+    <hr>
+    <p>[mostrar o CNPJ] </p>
+        <form action="">
+            <fieldset id="usuario"> <legend><strong>Identificação Usuário</strong></legend>
+                <p><label for="iRzSocial">Razão Social:</label> <input type="text" name="nRzSocial" id="iRzSocial" size="20" maxlength="30" placeholder="Razão Social de Cadastro"/> </p>
+                <p><label for="iUsuario">Usuário</label>: <input type="text" name="nUsuario" id="iUsuario" size="20" maxlength="30" placeholder="Nome do Responsável "/></p>
+                <p><label for="iCargo">Cargo</label>: <input type="text" name="nCargo" id="iCargo" size="20" maxlength="20" placeholder="Cargo de Ocupação" /></p>
+                <p><label for="iSetor">Setor</label>: <input type="text" name="nSetor" id="iSetor" size="20" maxlength="20" placeholder="Setor" /></p>
+                <p><label for="iSenha">Senha</label>: <input type="password" name="nSenha" id= "iSenha"size="8" maxlength="8" placeholder="8 dígitos"/> <label for="iConSenha">Confirmar senha:</label> <input type="password" name="nConSenha" id="iConSenha" size="8" maxlength="8" placeholder="8 dígitos"/> </p>
+            </fieldset>
+            <br>
+            <fieldset id="contato"><legend><strong>Contatos</strong></legend>
+                <p><label for="iEmail">e-mail:</label> <input type="email" name="nEmail" id="iEmail"30 size="20" maxlength="30" placeholder="-------@--------"/></p>
+                <p><label for="iConfEmail">Confirmar e-mail:</label> <input type="email" name="nConEmail" id="iConfEmail" size="20" maxlength="30" placeholder="-------@--------"/> </p>
+                <p><input type="radio" name="nWatsApp" id="iWhatsApp"/><label for="iWhatsApp"> WhatsApp</label></p>
+                <P><label for="iTelefone">Telefone</label> <input type="tel" name="nTelefone" id="iTelefone" size="12" maxlength="12"placeholder="(xx)xxxxx-xxxx"/></P>
+            </fieldset>
+            <br>
+
+            <fieldset id="endereco"><legend><strong>Endereço</strong></legend>
+                <p><label for="iCEP">CEP</label>: <input type="" name="nCEP" id="iCEP" size="8" maxlength="9" placeholder="xxxxx-xx"></p>
+                <p><label for="iLogradouro">Logradouro</label>:<input type="text" name="nLogradouro" id="iLogradouro" size="20" maxlength="21" placeholder="rua/av."/></p>  
+                <p><label for="iNum">N° </label><input type="number" name="nNum" id="iNum" size="2" maxlength="5" placeholder="  número"/></p>
+                <p><label for="iCidade">Cidade</label>:<input type="text" name="nCidade" id="iCidade" size="12" maxlength="30" placeholder="  cidade"/>
+
+                    <label for="iUF">UF</label>:<input type="text" name="nUF" id="iUF" size="2" maxlength="2" placeholder=" UF"/>
+                </p>
+            </fieldset>
+            <br>
+            <p><input type="radio" name="nTermo" id="iTermo" /><label for="iTermo"><i><strong>Termo de autorização:</strong></i></label></p>
+            <button>ENVIAR</button>
+        </form>
+        <br>
+
+
+
+        <button>avançar</button>
+    <button><a href="index.html" rel="prev">voltar</a></button>
+    
+</body>
+</html>
