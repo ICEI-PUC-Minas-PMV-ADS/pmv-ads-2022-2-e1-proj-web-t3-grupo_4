@@ -36,11 +36,48 @@
 
                   <hr class="my-4">
                   <div class="d-grid gap-2 d-md-block">
-                    <button class="btn btn-secondary" type="button">Buscar</button>
+                    <button id="buscar" class="btn btn-secondary" type="button">Buscar</button>
 
                     <button id="cadastrar" class="btn btn-primary" type="button">Cadastrar</button>
                   </div>
                   <hr class="my-4">
+
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">Cod.</th>
+                        <th scope="col">Produto</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Vencimento</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Televisão</td>
+                        <td>LG</td>
+                        <td>12/10/2022</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Relógio</td>
+                        <td>Cassio</td>
+                        <td>05/10/2023</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Guarda Roupa</td>
+                        <td>Itatiaia</td>
+                        <td>12/06/2026</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>Notebook</td>
+                        <td>Dell</td>
+                        <td>12/10/2025</td>
+                      </tr>
+                    </tbody>
+                  </table>
 
               </form>
             </div>
@@ -60,6 +97,10 @@
 
         document.getElementById("cadastrar").onclick = function () {
             location.href = "./cadastro.html";
+        };
+
+        document.getElementById("buscar").onclick = function () {
+            alert("Busca Realizada!");
         };
     </script>
       </script>
