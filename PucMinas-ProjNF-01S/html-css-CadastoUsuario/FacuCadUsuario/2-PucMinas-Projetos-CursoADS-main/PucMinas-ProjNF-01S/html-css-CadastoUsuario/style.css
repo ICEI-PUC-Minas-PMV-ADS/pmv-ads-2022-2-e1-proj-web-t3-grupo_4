@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+header {
+    background-color: rgb(247, 243, 243);
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    text-align:center;
+    margin: -3px 10px 0px 10px;
+    border: 30px 5px;
+    padding: 1px 2px 2px 2px; 
+
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.212);
+    border-radius: 4px;
+
+
+}
+body{
+  background-image: linear-gradient(to left, rgb(207, 235, 240), rgb(187, 205, 240));
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.80em;
+
+}
+
+div {
+    background-color: rgb(255, 252, 252);
+    margin: 10px;
+    padding: 1px;
+
+    box-shadow: 2px 2px 2px 2px rgba(135, 139, 139, 0.192);
+    border-radius: 1px;
+
+}
+p > label:hover{
+    color: rgb(2, 0, 138);
+    font-weight: bolder;
+}
+
+p.especifico{
+
+   color: black;
+   font-weight: bolder;
+}
+
+
+footer{
+    background-color: rgb(43, 70, 226);
+    color: rgb(253, 246, 246);
+    font-weight: normal;
+    text-align:center;
+    padding: 0px;
+    border: 0px;
+    margin: 5px;
+
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.192);
+    border-radius: 1px;
+}
+
+button{
+    
+    margin-left: 10px;
+}
