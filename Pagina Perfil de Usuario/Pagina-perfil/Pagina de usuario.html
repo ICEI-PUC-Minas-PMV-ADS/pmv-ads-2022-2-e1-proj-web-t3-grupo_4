@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            
-    }
-        #titulo{
-            display: block;
-            margin: 20%;
-           
-        }
-        #inf{
-           width: 45%;
-            margin-right: auto;
-        }
-        #config{
-           width: 45%;
-            
-        }
-        #cor{
-            color: black;
-        }
 
-</style>
 <head>
 
-    <title>Site</title>
+    <title>Perfil de Usuário</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css" />
     <meta name="author" content="Rener" />
     <meta http-equiv="cache-control" content="no cache" />
+    <style>
+         @media(max-width:550px){
+            
+            #inf,#config{width: 90%; display: block; 
+            float: none; margin-left: 5%; margin: 5%;}
+            header{margin-left: auto; margin-right: auto; display: 100%;}
+           
+
+            }
+     
+            body{
+            font-family: Arial, Helvetica, sans-serif;
+            
+            
+    }
+        
+        
+        #cor{
+            color: black;
+    }
+    </style>
+ 
 </head>
 
 <body>
-   
+   <div>
     <header id="titulo_da_pagina"> 
     
-        <h1 id="titulo">
+        <h2 id="titulo">
             <b>Perfil de Usuário</b>
 
-    </h1>
+
+    </h2>
     
 </header>
 
-    <iframe id="inf" src="Informaçoes gerais.html" frameborder="30%" width="250" height="200"></iframe> 
+    <iframe id="inf"  src="Informaçoes gerais.html" frameborder="30%" width="250" height="200">
+    </iframe> 
 
 
     <iframe id="config" name="config" src="Configuraçoes.html" frameborder="30%" height="200" width="250">
@@ -55,10 +57,10 @@
     <footer id="suporte">
 
         <a id="cor" href=""><h3>Suporte Técnico<h3></a>
+</div>
 
 </footer>
 
-<p><a href="Html2.html" target="_blank">Referencia para o site </a></p>
 </body>
 
 </html>
