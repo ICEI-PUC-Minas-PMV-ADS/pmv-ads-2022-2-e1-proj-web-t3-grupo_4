@@ -1,8 +1,6 @@
 body {
-    background: white;
-    background: linear-gradient(to right, #ffffff, #618dab);
+    background: rgb(240, 240, 240);
 }
-
 
 #Titulo {
     font-size: 30px !important;
@@ -21,12 +19,6 @@ body {
     text-transform: none !important;
 }
 
-#btn-facebook {
-    color: white !important;
-    background-color: #3b5998;
-    text-transform: none !important;
-}
-
 .footer {
     height: 70px;
     display: flex;
@@ -41,4 +33,8 @@ body {
     background-color: #284355;
     border-color: #284355;
     text-transform: none !important;
+}
+
+.card{
+    max-width: 400px!important;
 }

@@ -41,10 +41,16 @@
                             <div class="form-floating mb-3">
                                 <input type="email" class="form-control" id="email" placeholder="name@example.com">
                                 <label for="floatingInput">E-mail</label>
+                                <div class="invalid-feedback">
+                                    E-mail inválido
+                                </div>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="password" class="form-control" id="password" placeholder="Password">
+                                <input type="password" class="form-control " id="password" placeholder="Password">
                                 <label for="floatingPassword">Senha</label>
+                                <div class="invalid-feedback">
+                                    Usuário ou senha inválido
+                                </div>
                             </div>
 
                             <div class="form-check mb-3">
@@ -74,9 +80,11 @@
 
 
                             <div class="d-grid mb-5">
-                                <button id="btn-facebook" class="btn btn-login text-uppercase fw-bold" type="submit">
-                                    <i class="bi bi-facebook "></i> Entrar com Facebook
-                                </button>
+
+                                <div id="fb-root"></div>
+                                <div class="fb-login-button" data-width="100%" data-size="large"
+                                    data-button-type="login_with" data-layout="default" data-auto-logout-link="false"
+                                    data-use-continue-as="false"></div>
                             </div>
 
 
@@ -89,7 +97,6 @@
                 </div>
             </div>
         </div>
-
         <footer>
             <div class="footer row">
                 <p class="text-end">&copy; 2022 Minha Garantia</p>
@@ -109,6 +116,34 @@
         crossorigin="anonymous"></script>
     <script src="https://apis.google.com/js/api:client.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v15.0&appId=445410587713105&autoLogAppEvents=1"
+        nonce="wfhHj5ha"></script>
+    <script>
+        var response;
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '445410587713105',
+                cookie: true,
+                xfbml: true,
+                version: '1'
+            });
+
+            FB.AppEvents.logPageView();
+
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        FB.getLoginStatus(function (response) {
+            statusChangeCallback(response);
+        });
+    </script>
     <script src="./login.js"></script>
 </body>
 
