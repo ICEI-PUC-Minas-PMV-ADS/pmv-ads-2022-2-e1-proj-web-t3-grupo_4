@@ -1,3 +1,5 @@
+//copiado de https://horadecodar.com.br/2022/02/04/calcular-a-diferenca-de-dias-entre-duas-datas-em-javascript/
+
 function imprimeDiasGarantia(data){
     const hoje  = new Date();
 
